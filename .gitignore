@@ -1,0 +1,8 @@
+.DS_Store
+**/.DS_Store
+__pycache__/
+**/__pycache__/
+*.pyc
+
+# 開発用の内部ドキュメント（未解決課題メモ）。公開スキルには含めない。
+BACKLOG.md

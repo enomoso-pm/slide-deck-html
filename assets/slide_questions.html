@@ -1,0 +1,81 @@
+<!-- ====================================================== -->
+<!-- CONFIRMATION SLIDE — Questions to ask stakeholders       -->
+<!-- Typical use: Last slide of each topic. Lists items to    -->
+<!-- confirm with client/partner with priority and reason.    -->
+<!-- ====================================================== -->
+<div class="slide">
+  <div class="slide-page">
+    <div class="page-header">
+      <div class="meta-row">
+        <span class="item-id">{{ITEM_ID}}  —  確認事項</span>
+        <span class="priority">{{PRIORITY_BADGE}}</span>
+      </div>
+      <div class="action-title">
+        {{N}}領域 {{TOTAL_QUESTIONS}}項目について、<span class="em">{{STAKEHOLDER_NAMES}}</span>に方針確認をお願いしたい
+      </div>
+      <div class="lead-in">
+        {{LEAD_IN_TEXT}}
+      </div>
+    </div>
+
+    <div class="page-body">
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th style="width:60px;">No.</th>
+            <th style="width:140px;">領域</th>
+            <th>確認内容</th>
+            <th style="width:80px;">優先度</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="text-align:center; color:#2563EB; font-weight:600;">1</td>
+            <td class="row-label">{{Q1_AREA}}</td>
+            <td>{{Q1_CONTENT}}</td>
+            <td style="text-align:center;">{{Q1_PRIORITY}}</td>
+          </tr>
+          <tr>
+            <td style="text-align:center; color:#2563EB; font-weight:600;">2</td>
+            <td class="row-label">{{Q2_AREA}}</td>
+            <td>{{Q2_CONTENT}}</td>
+            <td style="text-align:center;">{{Q2_PRIORITY}}</td>
+          </tr>
+          <tr>
+            <td style="text-align:center; color:#2563EB; font-weight:600;">3</td>
+            <td class="row-label">{{Q3_AREA}}</td>
+            <td>{{Q3_CONTENT}}</td>
+            <td style="text-align:center;">{{Q3_PRIORITY}}</td>
+          </tr>
+          <!-- Add more <tr> rows as needed. Aim for 5-8 questions max per slide. -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="page-footer">
+      <span class="left">{{FOOTER_LEFT}}</span>
+      <span class="right">P.{{PAGE_NUM}}</span>
+    </div>
+  </div>
+</div>
+
+<!--
+PLACEHOLDER GUIDE:
+  STAKEHOLDER_NAMES  : "A社様・B社様" / "クライアント各位" / "担当者氏名"
+  Q*_AREA            : Short topic label, e.g. "データ移行" / "認証方式" / "スケジュール"
+  Q*_CONTENT         : The actual question. Should be answerable yes/no or with a short choice.
+                       End with "？" or "...か？" for clarity.
+                       Use <strong> to highlight the key decision word.
+  Q*_PRIORITY        : "高" / "中" / "低" — colored centered. You can wrap in
+                       <span style="color:#DC2626;">高</span> for red high-priority.
+
+DENSITY GUIDANCE:
+  - 5-8 questions per slide is comfortable. Beyond 8, split.
+  - Each question should be 1-2 lines in the content cell.
+  - If you need to show "想定回答" or "目的", add another column or split into two slides.
+
+VARIATIONS:
+  - Add a "目的" column to explain why each question matters
+  - Add a "想定回答" column to pre-write expected answers
+  - Group by 領域 with rowspan when you have multiple questions in the same area
+-->

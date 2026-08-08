@@ -1,0 +1,37 @@
+<!-- ====================================================== -->
+<!-- SECTION DIVIDER — Chapter break between major topics    -->
+<!-- Optional. Use when the deck spans multiple major topics  -->
+<!-- (e.g. NO.22 A案件 → NO.1 マルチテナント → NO.2 認証).      -->
+<!-- Reuses cover-style layout but smaller scale.            -->
+<!-- ====================================================== -->
+<div class="slide">
+  <div class="slide-cover">
+    <div class="cover-top">
+      <div class="category">SECTION {{NN}} — {{ENGLISH_LABEL}}</div>
+      <h1 style="font-size:38px;">{{TOPIC_TITLE}}</h1>
+      <div class="subtitle" style="font-size:14px;">
+        {{TOPIC_DESCRIPTION_LINE_1}}<br>
+        {{TOPIC_DESCRIPTION_LINE_2}}
+      </div>
+    </div>
+    <div class="cover-bottom">
+      <div class="date">P.{{START_PAGE}} – P.{{END_PAGE}}</div>
+      <div class="org">{{ITEM_ID}}</div>
+    </div>
+  </div>
+</div>
+
+<!--
+PLACEHOLDER GUIDE:
+  NN                  : Two-digit section number, e.g. "01", "02", "03"
+  ENGLISH_LABEL       : "MULTI-TENANT FOUNDATION" / "CUSTOM ID INFRASTRUCTURE"
+  TOPIC_TITLE         : Japanese topic name, e.g. "マルチテナント基盤の刷新"
+  START_PAGE/END_PAGE : Range of pages this section covers
+  ITEM_ID             : "NO.1" / "NO.22" — the work item ID
+
+USE OR SKIP:
+  - Use this for decks with 3+ major topics (helps visual navigation)
+  - Skip for single-topic decks (just go straight from cover to content)
+  - In the reference v9 deck, dividers were not used — slides flow continuously.
+    But for very long decks (>30 slides), dividers help.
+-->

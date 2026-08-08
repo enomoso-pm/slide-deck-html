@@ -1,0 +1,94 @@
+<!-- ====================================================== -->
+<!-- TABLE SLIDE — Implementation Policy / Risk Matrix       -->
+<!-- Typical use: After detail slides, before confirmation.  -->
+<!-- Two-section table: 仕様 (rows) + リスク (rows), divided  -->
+<!-- by a thicker border. Use rowspan in first column to     -->
+<!-- group rows under "仕様" / "リスク".                     -->
+<!-- ====================================================== -->
+<div class="slide">
+  <div class="slide-page">
+    <div class="page-header">
+      <div class="meta-row">
+        <span class="item-id">{{ITEM_ID}}  —  実装方針・リスク</span>
+        <span class="priority">{{PRIORITY_BADGE}}</span>
+      </div>
+      <div class="action-title">
+        {{HEADLINE_WITH_KEY_RISK}}
+      </div>
+      <div class="lead-in">
+        {{LEAD_IN_TEXT}}
+      </div>
+    </div>
+
+    <div class="page-body">
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th style="width:100px;">区分</th>
+            <th style="width:170px;">領域</th>
+            <th>内容</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- ===== 仕様セクション (specification rows) ===== -->
+          <tr>
+            <td rowspan="{{SPEC_ROW_COUNT}}" style="font-weight:600; color:#2563EB; vertical-align:middle; text-align:center;">仕様</td>
+            <td class="row-label">{{SPEC_AREA_1}}</td>
+            <td>{{SPEC_CONTENT_1}}</td>
+          </tr>
+          <tr>
+            <td class="row-label">{{SPEC_AREA_2}}</td>
+            <td>{{SPEC_CONTENT_2}}</td>
+          </tr>
+          <tr>
+            <td class="row-label">{{SPEC_AREA_3}}</td>
+            <td>{{SPEC_CONTENT_3}}</td>
+          </tr>
+
+          <!-- ===== リスクセクション (risk rows) ===== -->
+          <tr>
+            <td rowspan="{{RISK_ROW_COUNT}}" style="font-weight:600; color:#D97706; vertical-align:middle; text-align:center; border-top:2px solid #D0D0D0;">リスク</td>
+            <td class="row-label" style="border-top:2px solid #D0D0D0;">{{RISK_AREA_1}}</td>
+            <td style="border-top:2px solid #D0D0D0;">{{RISK_CONTENT_1}}</td>
+          </tr>
+          <tr>
+            <td class="row-label">{{RISK_AREA_2}}</td>
+            <td>{{RISK_CONTENT_2}}</td>
+          </tr>
+          <tr>
+            <td class="row-label">{{RISK_AREA_3}}</td>
+            <td>{{RISK_CONTENT_3}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="page-footer">
+      <span class="left">{{FOOTER_LEFT}}</span>
+      <span class="right">P.{{PAGE_NUM}}</span>
+    </div>
+  </div>
+</div>
+
+<!--
+PLACEHOLDER GUIDE:
+  HEADLINE_WITH_KEY_RISK : Pattern: "<N>つの領域で…改修 ― 最大のリスクは<span class='em'>X</span>と<span class='em'>Y</span>"
+                           Or: "<N>系統に変更が影響 ― 既存の<span class='em'>移行設計</span>が鍵"
+  SPEC_ROW_COUNT         : Number of spec rows (used in rowspan). Match the actual <tr> count.
+  SPEC_AREA_*            : Short label like "データ構造" / "CMS側" / "アプリ側" / "バッチ側" / "API"
+  SPEC_CONTENT_*         : Detailed content. Can include <strong>, <span class="accent-em">,
+                           <span class="accent-warn">, ★ markers, or even nested simple tables.
+  RISK_ROW_COUNT         : Number of risk rows
+  RISK_AREA_*            : Short label like "データ移行" / "仕様定義" / "運用設計" / "コスト"
+
+DENSITY GUIDANCE:
+  - Total rows (spec + risk): aim for 6-10 rows. Beyond that, content will spill over 720px.
+  - Each cell content: 1-3 lines max. Long content needs to go on a separate slide.
+  - The middle row (last spec row) doesn't need any special border — only the first risk row
+    needs the dividing border-top:2px solid #D0D0D0.
+
+VARIATIONS:
+  - Spec-only or Risk-only: drop the unused rowspan section.
+  - More columns: change <colgroup> widths and adjust th/td accordingly.
+  - Add a "判定" column (○/△/✕): insert another <th> and <td> with width:60px.
+-->

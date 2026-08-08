@@ -1,0 +1,97 @@
+<!-- ====================================================== -->
+<!-- SUMMARY SLIDE — Two-column with takeaway and/or diagram -->
+<!-- Typical use: P.2 of each topic. Left = goal/premise,    -->
+<!-- right = scope/structure (often with diagram).            -->
+<!-- ====================================================== -->
+<div class="slide">
+  <div class="slide-page">
+    <div class="page-header">
+      <div class="meta-row">
+        <span class="item-id">{{ITEM_ID}}</span>
+        <span class="priority">{{PRIORITY_BADGE}}</span>
+      </div>
+      <div class="action-title">
+        {{ACTION_TITLE_LEFT}}<span class="em">{{ACTION_TITLE_EM}}</span>{{ACTION_TITLE_RIGHT}}
+      </div>
+      <div class="lead-in">
+        {{LEAD_IN_TEXT}}
+      </div>
+    </div>
+
+    <div class="page-body">
+      <div class="two-col">
+        <!-- LEFT COLUMN: Goal / Premise / Background -->
+        <div style="display:flex; flex-direction:column;">
+          <div class="section-label">{{LEFT_SECTION_LABEL}}</div>
+          <div class="section-title">{{LEFT_SECTION_TITLE}}</div>
+          <div class="content-block">
+            <div class="block-heading">{{LEFT_HEADING_1}}</div>
+            <div class="block-body">
+              {{LEFT_BODY_1}}
+            </div>
+          </div>
+          <div class="content-block">
+            <div class="block-heading">{{LEFT_HEADING_2}}</div>
+            <div class="block-body">
+              <ul>
+                <li>{{LEFT_ITEM_1}}</li>
+                <li>{{LEFT_ITEM_2}}</li>
+                <li>{{LEFT_ITEM_3}}</li>
+              </ul>
+            </div>
+          </div>
+          <div class="takeaway" style="margin-top:auto;">
+            <div class="label">KEY POINT</div>
+            <div class="text">{{TAKEAWAY_TEXT}}</div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Scope / Structure / Diagram -->
+        <div style="display:flex; flex-direction:column;">
+          <div class="section-label">{{RIGHT_SECTION_LABEL}}</div>
+          <div class="section-title">{{RIGHT_SECTION_TITLE}}</div>
+          <div class="diagram" style="flex:1; display:flex; flex-direction:column;">
+            <div class="diagram-title">{{DIAGRAM_TITLE_EN}}</div>
+            <svg viewBox="0 0 500 290" class="svg-diagram" style="flex:1;" preserveAspectRatio="xMidYMid meet">
+              <!-- Replace with actual SVG content. See references/svg_diagrams.md -->
+              <rect x="180" y="15" width="140" height="42" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+              <text x="250" y="40" text-anchor="middle" font-size="12" fill="#1A2538" font-weight="600">{{DIAGRAM_NODE_TEXT}}</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span class="left">{{FOOTER_LEFT}}</span>
+      <span class="right">P.{{PAGE_NUM}}</span>
+    </div>
+  </div>
+</div>
+
+<!--
+PLACEHOLDER GUIDE:
+  ITEM_ID            : "NO.22  —  A社向け対応  /  POC" (use 2-space gaps for readability)
+  PRIORITY_BADGE     : "【 必須 】" or "【 高 】" or "【 中 】" (Japanese brackets w/ inner spacing)
+  ACTION_TITLE_*     : One sentence. Wrap the most important phrase in <span class="em">.
+                       Example split: ACTION_TITLE_LEFT="店舗単位でのクーポン配布を可能にする"
+                                      ACTION_TITLE_EM="独自のクーポン機能"
+                                      ACTION_TITLE_RIGHT="を新規開発し、…"
+  LEAD_IN_TEXT       : 1 short sentence (~50-80 chars) of context. Smaller gray text.
+  LEFT_SECTION_LABEL : "01  OVERVIEW" or "01  BACKGROUND" — number + English term
+  LEFT_SECTION_TITLE : Japanese subtitle, e.g. "本件のゴール・前提"
+  LEFT_HEADING_*     : "ゴール" / "前提" / "課題" / "対策" / "方針" etc.
+  LEFT_BODY_1        : Plain paragraph (no <ul>) or replace with <ul><li>...</li></ul>
+  LEFT_ITEM_*        : Bullet items. Use <span class="accent-warn">…</span> for warnings,
+                       <span class="accent-em">…</span> for emphasis.
+  TAKEAWAY_TEXT      : The single most important conclusion. One sentence, max 80 chars.
+                       Label can be: KEY POINT / DESIGN / NOTE / ACTION / DECISION
+  DIAGRAM_TITLE_EN   : Short English diagram label, e.g. "STORE HIERARCHY"
+  FOOTER_LEFT        : Always the same throughout the deck, e.g. "PROJECT NAME / SYSTEM REQUIREMENTS"
+  PAGE_NUM           : Sequential page number across the whole deck
+
+VARIATIONS:
+  - If no diagram: replace the right-column .diagram block with content blocks.
+  - If no takeaway: remove the .takeaway div from left column.
+  - If 4 bullets needed in one block, that's fine — keep ~5 max per block to stay under 720px.
+-->

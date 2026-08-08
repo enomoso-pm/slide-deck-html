@@ -1,0 +1,92 @@
+<!-- ====================================================== -->
+<!-- DETAIL SLIDE — Two-column with multiple content blocks  -->
+<!-- Typical use: P.3, P.4 of each topic. Each column shows  -->
+<!-- one sub-requirement broken into 課題/対策 or similar.    -->
+<!-- ====================================================== -->
+<div class="slide">
+  <div class="slide-page">
+    <div class="page-header">
+      <div class="meta-row">
+        <span class="item-id">{{ITEM_ID}}  —  詳細要件  ({{N}}/{{TOTAL}})</span>
+        <span class="priority">{{PRIORITY_BADGE}}</span>
+      </div>
+      <div class="action-title">
+        {{ACTION_TITLE_WITH_EMPHASIS}}
+      </div>
+      <div class="lead-in">
+        {{LEAD_IN_TEXT}}
+      </div>
+    </div>
+
+    <div class="page-body">
+      <div class="two-col">
+        <!-- LEFT COLUMN: One sub-requirement (e.g., ① 課題 → 対策) -->
+        <div>
+          <div class="section-label">{{LEFT_SECTION_LABEL}}</div>
+          <div class="section-title">{{LEFT_SECTION_TITLE}}</div>
+          <div class="content-block">
+            <div class="block-heading">課題</div>
+            <div class="block-body">
+              <ul>
+                <li>{{LEFT_ISSUE_1}}</li>
+                <li>{{LEFT_ISSUE_2}}</li>
+              </ul>
+            </div>
+          </div>
+          <div class="content-block">
+            <div class="block-heading">対策</div>
+            <div class="block-body">
+              <ul>
+                <li>{{LEFT_MEASURE_1}}</li>
+                <li>{{LEFT_MEASURE_2}}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Another sub-requirement OR design points list -->
+        <div>
+          <div class="section-label">{{RIGHT_SECTION_LABEL}}</div>
+          <div class="section-title">{{RIGHT_SECTION_TITLE}}</div>
+          <div class="content-block">
+            <div class="block-body">
+              <ul>
+                <li>{{RIGHT_POINT_1}}</li>
+                <li>{{RIGHT_POINT_2}}</li>
+                <li>{{RIGHT_POINT_3}}</li>
+                <li>{{RIGHT_POINT_4}}</li>
+                <li>{{RIGHT_POINT_5}}</li>
+              </ul>
+            </div>
+          </div>
+          <div class="takeaway">
+            <div class="label">{{TAKEAWAY_LABEL}}</div>
+            <div class="text">{{TAKEAWAY_TEXT}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span class="left">{{FOOTER_LEFT}}</span>
+      <span class="right">P.{{PAGE_NUM}}</span>
+    </div>
+  </div>
+</div>
+
+<!--
+PLACEHOLDER GUIDE:
+  Same as slide_summary.html for shared placeholders.
+
+  N / TOTAL          : "1/2" if this is the first of two detail slides for this topic
+  LEFT_SECTION_LABEL : "① 〜の機能" — leading number + the requirement name
+  LEFT_SECTION_TITLE : Japanese name, what kind of users / what scope
+  TAKEAWAY_LABEL     : DESIGN / DECISION / NOTE / ACTION / FUTURE / RISK
+
+CONTENT GUIDANCE (CRITICAL for fitting in 720px):
+  - Total bullets across both columns: roughly 6-10 bullets max
+  - Each bullet: 1 line ideally, max 2 lines (~80 full-width chars)
+  - If you have more content, SPLIT into another detail slide
+  - Use accent-warn for risks/warnings; accent-em for emphasis
+  - Keep block-heading short ("課題", "対策", "方針", "前提" etc.)
+-->

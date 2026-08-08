@@ -1,0 +1,36 @@
+<!-- ====================================================== -->
+<!-- COVER SLIDE                                            -->
+<!-- Use as the first slide of the deck.                    -->
+<!-- ====================================================== -->
+<div class="slide">
+  <div class="slide-cover">
+    <div class="cover-top">
+      <div class="category">{{CATEGORY_EN}}</div>
+      <h1>{{MAIN_TITLE}}<br>{{SUBTITLE_LINE}}</h1>
+      <div class="subtitle">
+        {{DESCRIPTION_LINE_1}}<br>
+        {{DESCRIPTION_LINE_2}}
+      </div>
+    </div>
+    <div class="cover-bottom">
+      <div class="date">{{YYYY.MM.DD}}</div>
+      <div class="org">{{ORG_NAME}}</div>
+    </div>
+  </div>
+</div>
+
+<!--
+PLACEHOLDER GUIDE:
+  CATEGORY_EN     : English category label, all caps with em-dash separators
+                    Example: "PROJECT NAME — SYSTEM REQUIREMENTS"
+                             "SERVICE NAME — MAINTENANCE PROPOSAL"
+  MAIN_TITLE      : Japanese main title (Noto Serif JP, 46px)
+                    Example: "プロジェクト名／サービス名"
+  SUBTITLE_LINE   : Optional second line of the title
+                    Example: "システム要望整理 資料"
+                    If no subtitle, remove the <br>{{SUBTITLE_LINE}}
+  DESCRIPTION_*   : 1-2 lines of body text describing the document's purpose
+                    Keep each line under ~50 full-width chars to avoid wrap
+  YYYY.MM.DD      : Date in dotted format, e.g. "2026.04.22"
+  ORG_NAME        : Issuing organization, e.g. "株式会社◯◯（自社名）"
+-->
